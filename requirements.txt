@@ -1,0 +1,7 @@
+ansible==2.9.2
+ansible-runner==1.4.4
+Jinja2==2.10.3
+python-vagrant==0.5.15
+pywinrm==0.4.1
+PyYAML==5.3.1
+tabulate==0.8.6
