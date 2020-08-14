@@ -7,7 +7,7 @@ config.vm.define "attack-range-kali_machine" do |config|
   config.vm.network :private_network, ip: "{{ kali_machine_private_ip }}"
 
   config.vm.provision "ansible" do |ansible|
-      ansible.playbook = "../ansible/playbooks/kali_linux.yml"
+      ansible.playbook = "../ansible/kali_linux.yml"
       ansible.config_file = "../ansible/ansible.cfg"
       ansible.compatibility_mode = "2.0"
       ansible.extra_vars = {

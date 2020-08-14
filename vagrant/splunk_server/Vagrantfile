@@ -8,7 +8,7 @@ config.vm.define "attack-range-splunk-server" do |config|
   config.vm.network :private_network, ip: "{{ splunk_server_private_ip }}"
 
   config.vm.provision "ansible" do |ansible|
-      ansible.playbook = "../ansible/playbooks/splunk_server.yml"
+      ansible.playbook = "../ansible/splunk_server.yml"
       ansible.config_file = "../ansible/ansible.cfg"
       ansible.compatibility_mode = "2.0"
       ansible.extra_vars = {

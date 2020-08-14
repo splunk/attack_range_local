@@ -94,10 +94,10 @@ class VagrantController():
         # get ip address from machine
         self.check_targets_running_vagrant(target, self.log)
         target_ip = self.get_ip_address_from_machine(target)
-        runner = ansible_runner.run(private_data_dir='.attack_range/',
+        runner = ansible_runner.run(private_data_dir='../attack_range_local/',
                                cmdline=str('-i ' + target_ip + ', '),
-                               roles_path="../ansible/roles",
-                               playbook='../ansible/playbooks/atomic_red_team.yml',
+                               roles_path="ansible/roles",
+                               playbook='ansible/atomic_red_team.yml',
                                extravars={'art_branch': self.config['art_branch'], 'art_repository': self.config['art_repository'], 'run_specific_atomic_tests': run_specific_atomic_tests, 'art_run_tests': simulation_atomics, 'art_run_techniques': simulation_techniques, 'ansible_user': 'Vagrant', 'ansible_password': 'vagrant', 'ansible_port': 5985, 'ansible_winrm_scheme': 'http'},
                                verbosity=0)
 

@@ -31,7 +31,7 @@ config.vm.define "attack-range-windows-server" do |config|
         demo_scenario: '{{ demo_scenario }}',
         capture_attack_data: '{{ capture_attack_data }}'
       }
-      ansible.playbook = "../ansible/playbooks/windows_dc_client.yml"
+      ansible.playbook = "../ansible/windows_dc_client.yml"
       ansible.config_file = "../ansible/ansible.cfg"
       ansible.compatibility_mode = "2.0"
   end
