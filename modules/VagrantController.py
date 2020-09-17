@@ -94,7 +94,7 @@ class VagrantController():
         # get ip address from machine
         self.check_targets_running_vagrant(target, self.log)
         target_ip = self.get_ip_address_from_machine(target)
-        runner = ansible_runner.run(private_data_dir='../attack_range_local/',
+        runner = ansible_runner.run(private_data_dir='.',
                                cmdline=str('-i ' + target_ip + ', '),
                                roles_path="ansible/roles",
                                playbook='ansible/atomic_red_team.yml',
