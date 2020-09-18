@@ -11,6 +11,12 @@ Attack Range can be built in three different ways:
 - **cloud** using terraform and AWS, see [attack\_range](https://github.com/splunk/attack_range)
 - **cloud-only** see the [attack\_range\_cloud](https://github.com/splunk/attack_range_cloud/) project for details
 
+## Installation 🏗
+
+### [For Ubuntu 18.04](https://github.com/splunk/attack_range_local/wiki/Ubuntu-18.04-Installation)
+
+### [For MacOS](https://github.com/splunk/attack_range_local/wiki/MacOS-Installation)
+
 ## Architecture 🏯
 ![Logical Diagram](docs/attack_range_local_architecture.png)
 
