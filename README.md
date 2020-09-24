@@ -13,7 +13,7 @@ Attack Range can be built in three different ways:
 
 ## Installation 🏗
 
-### [For Ubuntu 18.04](https://github.com/splunk/attack_range_local/wiki/Ubuntu-18.04-Installation)
+### [For Ubuntu 18.04](https://github.com/devnull044/attack_range_local/wiki/Ubuntu-18.04-Installation)
 
 ### [For MacOS](https://github.com/splunk/attack_range_local/wiki/MacOS-Installation)
 
