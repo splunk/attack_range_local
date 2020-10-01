@@ -1,6 +1,6 @@
 - name: Copy enterprise security to server
   copy:
-    src: "../../apps/{{ splunk_es_app }}"
+    src: "../../../apps/{{ splunk_es_app }}"
     dest: /tmp/es_app.tgz
   when: install_es == "1"
 
