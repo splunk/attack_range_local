@@ -21,7 +21,7 @@ config.vm.define "attack-range-phantom-server" do |config|
   config.vm.provider "virtualbox" do |vb, override|
     vb.gui = true
     vb.name = "#{VM_NAME_P}"
-    vb.customize ["modifyvm", :id, "--memory", 4096]
-    vb.customize ["modifyvm", :id, "--cpus", 4]
+    vb.customize ["modifyvm", :id, "--memory", {{ phantom_server_memory }}]
+    vb.customize ["modifyvm", :id, "--cpus", {{ phantom_server_cpus }}]
   end
 end
