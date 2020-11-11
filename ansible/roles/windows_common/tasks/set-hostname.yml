@@ -5,5 +5,5 @@
     name: "{{ hostname }}-{{ 9999999 | random }}"
 
 - name: set timezone to Asia/Tokyo
-  timezone:
+  win_timezone:
     name: Asia/Tokyo
