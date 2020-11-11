@@ -25,7 +25,8 @@ config.vm.define "attack-range-win10" do |config|
         windows_domain_controller_private_ip: '{{ windows_domain_controller_private_ip }}',
         run_demo: '{{ run_demo }}',
         demo_scenario: '{{ demo_scenario }}',
-        capture_attack_data: '{{ capture_attack_data }}'
+        capture_attack_data: '{{ capture_attack_data }}',
+        win_timezone: '{{ win_timezone }}'
       }
       ansible.playbook = "../ansible/windows_workstation.yml"
       ansible.config_file = "../ansible/ansible.cfg"
