@@ -3,7 +3,3 @@
 - name: Change the hostname
   win_hostname:
     name: "{{ hostname }}-{{ 9999999 | random }}"
-
-- name: set timezone to Asia/Tokyo
-  win_timezone:
-    name: Asia/Tokyo
