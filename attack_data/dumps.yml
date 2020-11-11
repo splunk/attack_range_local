@@ -12,10 +12,10 @@
 - name: windows_security_events
   dump_parameters:
     out: windows-security.log
-    search: source=WinEventLog:Security
+    search: source=XmlWinEventLog:Security
     time: -2h
   replay_parameters:
-    source: WinEventLog:Security
+    source: XmlWinEventLog:Security
     sourcetype: WinEventLog
     index: test
   enabled: True
@@ -23,10 +23,10 @@
 - name: windows_system_events
   dump_parameters:
     out: windows-system.log
-    search: source=WinEventLog:system
+    search: source=XmlWinEventLog:system
     time: -2h
   replay_parameters:
-    source: WinEventLog:System
+    source: XmlWinEventLog:system
     sourcetype: WinEventLog
     index: test
   enabled: True
