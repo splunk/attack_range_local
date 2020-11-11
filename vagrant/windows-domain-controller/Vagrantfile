@@ -34,8 +34,8 @@ config.vm.define "attack-range-windows-domain-controller" do |config|
   config.vm.provider "virtualbox" do |vb, override|
     vb.gui = true
     vb.name = "#{VM_NAME_WIN_DC}"
-    vb.customize ["modifyvm", :id, "--memory", 2048]
-    vb.customize ["modifyvm", :id, "--cpus", 1]
+    vb.customize ["modifyvm", :id, "--memory", {{ windows_domain_controller_memory }}]
+    vb.customize ["modifyvm", :id, "--cpus", {{ windows_domain_controller_cpus }}]
     vb.customize ["modifyvm", :id, "--vram", "32"]
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
     vb.customize ["setextradata", "global", "GUI/SuppressMessages", "all" ]
