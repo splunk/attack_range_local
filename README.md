@@ -50,7 +50,7 @@ Attack Range supports different actions:
 - Destroy Attack Range
 - Stop Attack Range
 - Resume Attack Range
-
+- Dump Attack Data
 
 ### Build Attack Range Local
 - Build Attack Range Local
@@ -80,6 +80,12 @@ python attack_range_local.py -a stop
 - Resume Attack Range Local
 ```
 python attack_range_local.py -a resume
+```
+
+## Dump Attack Data
+- Resume Attack Range Local
+```
+python attack_range_local.py -a dump -dn dump_data_folder
 ```
 
 ## Features 💍

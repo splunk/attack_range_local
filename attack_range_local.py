@@ -17,7 +17,7 @@ VERSION = 1
 if __name__ == "__main__":
     # grab arguments
     parser = argparse.ArgumentParser(description="starts a attack range ready to collect attack data into splunk")
-    parser.add_argument("-a", "--action", required=False, choices=['build', 'destroy', 'simulate', 'stop', 'resume'],
+    parser.add_argument("-a", "--action", required=False, choices=['build', 'destroy', 'simulate', 'stop', 'resume', 'dump'],
                         help="action to take on the range, defaults to \"build\", build/destroy/simulate/stop/resume allowed")
     parser.add_argument("-t", "--target", required=False,
                         help="target for attack simulation. For mode vagrant use name of the vbox")
@@ -28,6 +28,7 @@ if __name__ == "__main__":
     parser.add_argument("-c", "--config", required=False, default="attack_range_local.conf",
                         help="path to the configuration file of the attack range")
     parser.add_argument("-lm", "--list_machines", required=False, default=False, action="store_true", help="prints out all available machines")
+    parser.add_argument("-dn", "--dump_name", required=False, help="define the dump name")
     parser.add_argument("-v", "--version", default=False, action="store_true", required=False,
                         help="shows current attack_range version")
 
@@ -40,6 +41,7 @@ if __name__ == "__main__":
     simulation_techniques = args.simulation_technique
     simulation_atomics = args.simulation_atomics
     list_machines = args.list_machines
+    dump_name = args.dump_name
 
     print("""
 starting program loaded for B1 battle droid
@@ -87,6 +89,10 @@ starting program loaded for B1 battle droid
         log.error('ERROR: Specify target for attack simulation')
         sys.exit(1)
 
+    if action == 'dump' and not dump_name:
+        log.error('ERROR: Specify --dump_name for dump command')
+        sys.exit(1)
+
 
     # lets give CLI priority over config file for pre-configured techniques
     if simulation_techniques:
@@ -117,6 +123,9 @@ starting program loaded for B1 battle droid
 
     if action == 'simulate':
         controller.simulate(target, simulation_techniques, simulation_atomics)
+
+    if action == 'dump':
+        controller.dump(dump_name)
 
 
 # rnfgre rtt ol C4G12VPX

@@ -5,6 +5,11 @@ ansible/roles/*/files/splunk*.msi
 ansible/vars/vars.yml
 *.idea
 
+# attack data folder
+attack_data/*
+!attack_data/.gitkeep
+!attack_data/dumps.yml
+
 # apps folder
 apps/*
 !apps/.gitkeep
