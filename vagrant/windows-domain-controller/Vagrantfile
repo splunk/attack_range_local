@@ -24,7 +24,8 @@ config.vm.define "attack-range-windows-domain-controller" do |config|
         win_sysmon_url: '{{ win_sysmon_url }}',
         win_sysmon_template: '{{ win_sysmon_template }}',
         splunk_admin_password: '{{ splunk_admin_password }}',
-        capture_attack_data: '{{ capture_attack_data }}'
+        capture_attack_data: '{{ capture_attack_data }}',
+        win_timezone: '{{ win_timezone }}',
       }
       ansible.playbook = "../ansible/windows_dc.yml"
       ansible.config_file = "../ansible/ansible.cfg"
