@@ -19,21 +19,20 @@ class VagrantController():
 
         self.vagrantfile = 'Vagrant.configure("2") do |config| \n \n'
 
-        if config['phantom_server'] == '1':
-            self.vagrantfile += self.read_vagrant_file('phantom-server/Vagrantfile')
-            self.vagrantfile += '\n\n'
-
         self.vagrantfile += self.read_vagrant_file('splunk_server/Vagrantfile')
         self.vagrantfile += '\n\n'
 
         if config['windows_domain_controller'] == '1':
             self.vagrantfile += self.read_vagrant_file('windows-domain-controller/Vagrantfile')
             self.vagrantfile += '\n\n'
+        if config['windows_server'] == '1':
+            self.vagrantfile += self.read_vagrant_file('windows-server/Vagrantfile')
+            self.vagrantfile += '\n\n'
         if config['windows_client'] == '1':
             self.vagrantfile += self.read_vagrant_file('windows10/Vagrantfile')
             self.vagrantfile += '\n\n'
-        if config['windows_server'] == '1':
-            self.vagrantfile += self.read_vagrant_file('windows-server/Vagrantfile')
+        if config['phantom_server'] == '1':
+            self.vagrantfile += self.read_vagrant_file('phantom-server/Vagrantfile')
             self.vagrantfile += '\n\n'
         if config['kali_machine'] == '1':
             self.vagrantfile += self.read_vagrant_file('kali-machine/Vagrantfile')
@@ -42,7 +41,7 @@ class VagrantController():
         with open('vagrant/Vagrantfile', 'w') as file:
             file.write(self.vagrantfile)
 
-
+            
     def read_vagrant_file(self, path):
         j2_env = Environment(loader=FileSystemLoader('vagrant'),trim_blocks=True)
         template = j2_env.get_template(path)
