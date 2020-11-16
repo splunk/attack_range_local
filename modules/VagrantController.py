@@ -157,7 +157,7 @@ class VagrantController():
             for dump in yaml.full_load(dumps):
                 if dump['enabled']:
                     dump_out = dump['dump_parameters']['out']
-                    dump_search = "search %s earliest=%s | sort _time" \
+                    dump_search = "search %s earliest=%s | sort 0 _time" \
                                   % (dump['dump_parameters']['search'], dump['dump_parameters']['time'])
                     dump_info = "Dumping Splunk Search to %s " % dump_out
                     self.log.info(dump_info)
