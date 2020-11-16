@@ -23,7 +23,7 @@
 - name: windows_system_events
   dump_parameters:
     out: windows-system.log
-    search: source=XmlWinEventLog:system
+    search: source=XmlWinEventLog:System
     time: -2h
   replay_parameters:
     source: XmlWinEventLog:system
