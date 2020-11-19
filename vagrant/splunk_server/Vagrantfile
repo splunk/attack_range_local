@@ -52,7 +52,7 @@ config.vm.define "attack-range-splunk-server" do |config|
   config.vm.provider "virtualbox" do |vb, override|
     vb.gui = true
     vb.name = "#{VM_NAME}"
-    vb.customize ["modifyvm", :id, "--memory", 6144]
-    vb.customize ["modifyvm", :id, "--cpus", 4]
+    vb.customize ["modifyvm", :id, "--memory", {{ splunk_server_memory }}]
+    vb.customize ["modifyvm", :id, "--cpus", {{ splunk_server_cpus }}]
   end
 end

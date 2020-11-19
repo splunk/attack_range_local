@@ -153,6 +153,7 @@ We welcome feedback and contributions from the community! Please see our [contri
 * Rico Valdez
 * [Dimitris Lambrou](https://twitter.com/etz69)
 * [Dave Herrald](https://twitter.com/daveherrald)
+* [Kai Seidenschnur](https://www.linkedin.com/in/kai-seidenschnur-ab42889a)
 
 
 ## License

@@ -82,6 +82,8 @@ config.vm.define "attack-range-win10" do |config|
         win_sysmon_url: 'https://attack-range-appbinaries.s3-us-west-2.amazonaws.com/Sysmon.zip',
         win_sysmon_template: 'AttackRangeSysmon.xml',
         splunk_admin_password: 'I-l1ke-Attack-Range!',
+        capture_attack_data: '',
+        win_timezone: 'GMT Standard Time',
         windows_server_join_domain: '0',
         windows_domain_controller_private_ip: '10.0.1.14',
         run_demo: '',
