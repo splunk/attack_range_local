@@ -1,11 +1,12 @@
 
 import sys
+import time
 from time import sleep
 import splunklib.results as results
 import splunklib.client as client
 import splunklib.results as results
 import requests
-
+from xml.etree import ElementTree
 
 
 def export_search(host, s, password, export_mode="raw", out=sys.stdout, username="admin", port=8089):
@@ -24,9 +25,11 @@ def export_search(host, s, password, export_mode="raw", out=sys.stdout, username
     """
     import urllib3
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
     r = requests.post("https://%s:%d/servicesNS/admin/search/search/jobs/export" % (host, port),
                       auth=(username, password),
                       data={'output_mode': export_mode,
-                            'search': s},
+                            'search': s,
+                            'max_count': 1000000},
                       verify=False)
     out.write(r.text.encode('utf-8'))
