@@ -64,6 +64,12 @@ python attack_range_local.py -a build
 python attack_range_local.py -a simulate -st T1003.001 -t attack-range-windows-domain-controller
 ```
 
+### Show Attack Range Environment Status
+- Show Attack Range Environment Status
+```
+python attack_range_local.py -lm
+```
+
 ### Destroy Attack Range Local
 - Destroy Attack Range Local
 ```
@@ -83,7 +89,7 @@ python attack_range_local.py -a resume
 ```
 
 ## Dump Attack Data
-- Resume Attack Range Local
+- Dimp Attack Range Data
 ```
 python attack_range_local.py -a dump -dn dump_data_folder
 ```
