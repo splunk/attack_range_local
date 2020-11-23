@@ -8,8 +8,8 @@ The Attack Range is a detection development platform, which solves three main ch
 Attack Range can be built in three different ways:
 
 - **locally** with vagrant and virtualbox
-- **cloud** using terraform and AWS, see [attack\_range](https://github.com/splunk/attack_range)
-- **cloud-only** see the [attack\_range\_cloud](https://github.com/splunk/attack_range_cloud/) project for details
+- **Cloud** using terraform and AWS or Azure, see [attack_range](https://github.com/splunk/attack_range)
+- **Cloud-Only** see [attack_range_cloud](https://github.com/splunk/attack_range_cloud/)
 
 ## Installation 🏗
 
