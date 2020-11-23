@@ -89,7 +89,7 @@ python attack_range_local.py -a resume
 ```
 
 ## Dump Attack Data
-- Dimp Attack Range Data
+- Dump Attack Range Data
 ```
 python attack_range_local.py -a dump -dn dump_data_folder
 ```
