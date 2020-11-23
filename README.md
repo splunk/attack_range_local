@@ -64,8 +64,8 @@ python attack_range_local.py -a build
 python attack_range_local.py -a simulate -st T1003.001 -t attack-range-windows-domain-controller
 ```
 
-### Show Attack Range Environment Status
-- Show Attack Range Environment Status
+### Show Attack Range Status
+- Show Attack Range Status
 ```
 python attack_range_local.py -lm
 ```
