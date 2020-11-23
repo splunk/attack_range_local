@@ -20,7 +20,7 @@
   notify: restart splunk
 
 - name: Run es post-install setup
-  command: "/opt/splunk/bin/splunk search '| essinstall' -auth admin:{{ splunk_admin_password }}"
+  command: "/opt/splunk/bin/splunk search '| essinstall' -auth admin:{{ splunk_admin_password }} -ssl_enablement: auto"
   become: yes
   become_user: splunk
   when: install_es == "1"
