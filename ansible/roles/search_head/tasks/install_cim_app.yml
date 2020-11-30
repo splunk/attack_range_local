@@ -1,6 +1,6 @@
 - name: Check if cim app exists
   stat:
-    path: /opt/splunk/etc/apps/Splunk_SA_cim
+    path: /opt/splunk/etc/apps/Splunk_SA_CIM
   register: cim_app
 
 - name: download CIM app from S3 bucket
