@@ -8,8 +8,8 @@ The Attack Range is a detection development platform, which solves three main ch
 Attack Range can be built in three different ways:
 
 - **locally** with vagrant and virtualbox
-- **cloud** using terraform and AWS, see [attack\_range](https://github.com/splunk/attack_range)
-- **cloud-only** see the [attack\_range\_cloud](https://github.com/splunk/attack_range_cloud/) project for details
+- **cloud** using terraform and AWS or Azure, see [attack_range](https://github.com/splunk/attack_range)
+- **cloud-only** see [attack_range_cloud](https://github.com/splunk/attack_range_cloud/)
 
 ## Installation 🏗
 
@@ -64,6 +64,12 @@ python attack_range_local.py -a build
 python attack_range_local.py -a simulate -st T1003.001 -t attack-range-windows-domain-controller
 ```
 
+### Show Attack Range Status
+- Show Attack Range Status
+```
+python attack_range_local.py -lm
+```
+
 ### Destroy Attack Range Local
 - Destroy Attack Range Local
 ```
@@ -83,7 +89,7 @@ python attack_range_local.py -a resume
 ```
 
 ## Dump Attack Data
-- Resume Attack Range Local
+- Dump Attack Range Data
 ```
 python attack_range_local.py -a dump -dn dump_data_folder
 ```
