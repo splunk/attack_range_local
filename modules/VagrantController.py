@@ -17,6 +17,9 @@ class VagrantController():
         self.config = config
         self.log = log
 
+        if self.config['install_es'] == '1':
+            self.config['splunk_es_app_version'] = re.findall(r'\d+', self.config['splunk_es_app'])[0]
+
         self.vagrantfile = 'Vagrant.configure("2") do |config| \n \n'
 
         if config['phantom_server'] == '1':

@@ -30,6 +30,7 @@ config.vm.define "attack-range-splunk-server" do |config|
         install_es: '{{ install_es }}',
         install_mltk: '{{ install_mltk }}',
         splunk_es_app: '{{ splunk_es_app }}',
+        splunk_es_app_version: '{{ splunk_es_app_version }}',
         phantom_app: '{{ phantom_app }}',
         phantom_server: '{{ phantom_server }}',
         phantom_server_private_ip: '{{ phantom_server_private_ip }}',
