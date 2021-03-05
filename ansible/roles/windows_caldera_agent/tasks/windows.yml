@@ -20,10 +20,17 @@
 - include: firewall.yml
 - include: registry.yml
 
-- name: retrieve Caldera server config
+- name: retrieve Caldera server config from splunk_server
   win_get_url:
     url: 'https://{{ splunk_indexer_ip }}:8888/conf.yml'
     dest: 'C:\Program Files\cagent\conf.yml'
+  when: splunk_server == "1"
+
+- name: retrieve Caldera server config from caldera_server
+  win_get_url:
+    url: 'https://{{ caldera_server_ip }}:8888/conf.yml'
+    dest: 'C:\Program Files\cagent\conf.yml'
+  when: splunk_server == "0"
 
 - name: Setup agent
   win_shell: cagent.exe --startup auto install
