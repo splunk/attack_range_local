@@ -17,7 +17,9 @@ config.vm.define "attack-range-windows-server" do |config|
       ansible.extra_vars = {
         ansible_port: 6001,
         ansible_winrm_scheme: 'http',
+        splunk_server: "{{ splunk_server }}",
         splunk_indexer_ip: "{{ splunk_server_private_ip }}",
+        caldera_server_ip: '{{ caldera_server_private_ip }}',
         win_password: '{{ win_password }}',
         splunk_uf_win_url: '{{ splunk_uf_win_url }}',
         nxlog_url: '{{ nxlog_url }}',

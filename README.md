@@ -28,6 +28,7 @@ The virtualized deployment of Attack Range consists of:
 - A Kali Machine
 - Splunk Server
 - Phantom Server
+- Caldera Server
 
 Which can be added/removed/configured using [attack_range_local.conf](attack_range_local.conf). More machines such as Phantom, Linux server, Linux client, MacOS clients are currently under development.
 
@@ -103,18 +104,23 @@ python attack_range_local.py -a dump -dn dump_data_folder
   * Splunk UI available through port 8000 with user admin
   * ssh connection over configured ssh key
 
+- Bring Your Own Splunk Server
+  * Send events to your own Splunk Server instance
+  * Allows integration of automated attacks into your own detection engineering lifecycle
+
+
 - [Splunk Enterprise Security](https://splunkbase.splunk.com/app/263/)
   * [Splunk Enterprise Security](https://splunkbase.splunk.com/app/263/) is a premium security solution requiring a paid license.
-  * Enable or disable [Splunk Enterprise Security](https://splunkbase.splunk.com/app/263/) in [attack_range.conf](attack_range.conf)
+  * Enable or disable [Splunk Enterprise Security](https://splunkbase.splunk.com/app/263/) in [attack_range_local.conf](attack_range_local.conf)
   * Purchase a license, download it and store it in the apps folder to use it.
 
 - [Splunk Phantom](https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation.html)
   * [Splunk Phantom](https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation.html) is a Security Orchestration and Automation platform
   * For a free development license (100 actions per day) register [here](https://my.phantom.us/login/?next=/)
-  * Enable or disable [Splunk Phantom](https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation.html) in [attack_range.conf](attack_range.conf)
+  * Enable or disable [Splunk Phantom](https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation.html) in [attack_range_local.conf](attack_range_local.conf)
 
 - [Windows Domain Controller & Window Server & Windows 10 Client](https://github.com/splunk/attack_range/wiki/Windows-Infrastructure)
-  * Can be enabled, disabled and configured over [attack_range.conf](attack_range.conf)
+  * Can be enabled, disabled and configured over [attack_range_local.conf](attack_range_local.conf)
   * Collecting of Microsoft Event Logs, PowerShell Logs, Sysmon Logs, DNS Logs, ...
   * Sysmon log collection with customizable Sysmon configuration
   * RDP connection over port 3389 with user Administrator
@@ -135,7 +141,7 @@ python attack_range_local.py -a dump -dn dump_data_folder
 
 
 ## Support 📞
-Please use the [GitHub issue tracker](https://github.com/splunk/attack_range/issues) to submit bugs or request features.
+Please use the [GitHub issue tracker](https://github.com/splunk/attack_range_local/issues) to submit bugs or request features.
 
 If you have questions or need support, you can:
 

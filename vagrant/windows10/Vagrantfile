@@ -13,7 +13,9 @@ config.vm.define "attack-range-win10" do |config|
   config.vm.provision "ansible" do |ansible|
       ansible.extra_vars = {
         ansible_port: 5985,
+        splunk_server: "{{ splunk_server }}",
         splunk_indexer_ip: "{{ splunk_server_private_ip }}",
+        caldera_server_ip: '{{ caldera_server_private_ip }}',
         win_password: '{{ win_password }}',
         splunk_uf_win_url: '{{ splunk_uf_win_url }}',
         nxlog_url: '{{ nxlog_url }}',
