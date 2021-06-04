@@ -11,6 +11,7 @@ config.vm.define "attack-range-windows-domain-controller" do |config|
   config.winrm.retry_limit = 20
   config.vm.network "forwarded_port", guest: 5985, host: 6000
   config.vm.network :private_network, ip: "{{ windows_domain_controller_private_ip }}"
+  config.vm.synced_folder '.', '/vagrant', disabled: true
 
   config.vm.provision "ansible" do |ansible|
       ansible.extra_vars = {
