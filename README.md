@@ -1,5 +1,15 @@
-# Splunk Attack Range Local ⚔️
 
+
+# Attack Range Local Has been Deprecated and Archived in Favor of https://github.com/splunk/attack_range 
+Thank you to all of our users for their feedback, bug reports, and contributions to the project.  As of May 8, 2023, Attack Range Local has been deprecated and archived. 
+
+## But I Still Want to Run a Local Attack Range! 
+Great News!  https://github.com/splunk/attack_range now supports deploying Attack Range Locally (just like this repo used to).  It's a one-stop-shop for all of your simulation needs.  That repo brings the functionality of Attack Range Local and Attack Range Cloud into the Attack Range Repo.  It is actively maintained and in use by the Splunk Threat Research Team on a daily basis. 
+
+
+
+
+# Splunk Attack Range Local (Do Not Use for New Projects)⚔️
 ## Purpose 🛡
 The Attack Range is a detection development platform, which solves three main challenges in detection engineering. First, the user is able to build quickly a small lab infrastructure as close as possible to a production environment. Second, the Attack Range performs attack simulation using different engines such as Atomic Red Team or Caldera in order to generate real attack data. Third, it integrates seamlessly into any Continuous Integration / Continuous Delivery (CI/CD) pipeline to automate the detection rule testing process.  
 
